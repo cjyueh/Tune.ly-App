@@ -6,7 +6,7 @@ function getAll(req, res) {
     if (err) {
       console.log(err);
     }
-    res.json({message: "It works!"});
+    res.send(albums);
     // res.render('layout', {albums: albums});
   });
 }

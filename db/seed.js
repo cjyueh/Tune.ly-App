@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var conn = mongoose.connect('mongodb://localhost/albums-app');
-var Candy = require('../models/Album');
+var Album = require('../models/Album');
 Album.remove({}, function(err) {
   if (err) {
     console.log(err);
@@ -13,7 +13,7 @@ var albums = [
   release_date: "November 22, 1968",
   genre: "Rock",
   image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/The_White_Album.svg/2000px-The_White_Album.svg.png"},
-  {album_name: "Sgt. Pepper's Lonely Hearts Club Band",
+  {album_name: "Sgt. Peppers Lonely Hearts Club Band",
   artist_name: "The Beatles",
   release_date: "June 1, 1967",
   genre: "Rock",
