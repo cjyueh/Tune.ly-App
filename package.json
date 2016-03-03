@@ -1,0 +1,26 @@
+{
+  "name": "tunelyapp",
+  "version": "1.0.0",
+  "description": "Group project with Tashi, Ryder, and Christina",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjyueh/Tune.ly-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjyueh/Tune.ly-App/issues"
+  },
+  "homepage": "https://github.com/cjyueh/Tune.ly-App#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.6"
+  }
+}
