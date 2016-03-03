@@ -6,22 +6,26 @@ function getAll(req, res) {
     if (err) {
       console.log(err);
     }
-    res.render('layout', {albums: albums});
+    res.json({message: "It works!"});
+    // res.render('layout', {albums: albums});
   });
 }
 
 // POST (create) a new album
-function createAlbum(req, res) {
-  var album = new Album(req.body);
-  album.save(function(err, album) {
-    if (err) {
-      console.log(err);
-    }
-    res.redirect('layout');
-  });
-}
+// function createAlbum(req, res) {
+//   var album = new Album(req.body);
+//   album.save(function(err, album) {
+//     if (err) {
+//       console.log(err);
+//     }
+//     res.redirect('layout');
+//   });
+// }
 
 // GET form to make new album
-function newAlbum(req, res) {
-  res.render('new');
-}
+// function newAlbum(req, res) {
+//   res.render('new');
+// }
+module.exports = {
+  getAll: getAll
+};
