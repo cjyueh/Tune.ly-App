@@ -23,9 +23,10 @@ function getAll(req, res) {
 // }
 
 // GET form to make new album
-// function newAlbum(req, res) {
-//   res.render('new');
-// }
+function newAlbum(req, res) {
+  res.render('../views/albums/new');
+}
 module.exports = {
-  getAll: getAll
+  getAll: getAll,
+  newAlbum: newAlbum
 };
