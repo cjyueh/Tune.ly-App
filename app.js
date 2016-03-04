@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var methodOverride = require('method-override');
+var hbs = require('hbs');
 
 // for database
 var mongoose = require('mongoose');
@@ -17,6 +18,8 @@ app.use(methodOverride('_method'));
 
 // set app to use hbs
 app.set("view engine", "hbs");
+app.set('views', __dirname + '/views');
+hbs.registerPartials(__dirname + '/views/partials');
 
 app.use(express.static(__dirname + '/public'));
 

@@ -1,3 +1,30 @@
+* {
+	border-radius: 0 !important;
+}
+
+.navbar {
+	background: url("/images/sound_controller.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.navbar-brand {
+	font-family: 'Gruppo', cursive;
+	font-size: 7em;
+	height: 3.5em;
+	padding: 2em 15px;
+}
+
+.navbar-default {
+	border: none;
+}
+
+.navbar-default .navbar-brand {
+	color: #FFF9EA;
+}
+
 li {
 	list-style: none;
 }
