@@ -35,33 +35,24 @@ body {
 }
 
 /*----------  FOR ALBUM INDEX THUMBNAILS  ----------*/
+.index {
+	margin-top: 5em;
+}
+
 img {
+	border: 1px solid #aaaaaa;
 	width: 200px;
 }
+
 .attributes {
 	font-weight: bold;
 }
 
-.thumbnail {
+.col-centered {
 	float: none;
-	margin-bottom: 1.5em;
-	margin-top: 1.5em;
-	margin-right: -4px;
-	position: relative;
-	text-align: left;
-}
-/*
-.thumbnail.right-caption > img {
-    float: left;
-    margin-right: 1em;
-    position: absolute;
+	margin: 0 auto;
 }
 
-.thumbnail.right-caption {
-    float: left;
-    position: absolute;
+.alb-thumb {
+	display: inline-block;
 }
-
-.thumbnail.right-caption > .caption {
-    padding: 4px;
-}*/

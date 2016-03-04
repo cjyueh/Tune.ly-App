@@ -12,12 +12,14 @@
 </div>
 
 {{!-- FOR EACH ALBUM, MAKE THUMBNAIL --}}
-<div class="row">
-  <div class="col-sm-6 col-md-9">
+<div class="row index">
+  <div class="col-sm-6 col-md-9 col-centered">
   	{{#each albums}}
     <a href="/albums/{{_id}}" class="thumbnail">
-      <img src="{{image_url}}" />
-      <div class="caption">
+    	<div class="alb-thumb">
+      	<img src="{{image_url}}" />
+      </div>
+      <div class="caption alb-thumb">
 				<h4 class="album-name">{{album_name}}</h4>
 				<h5><span class = "attributes">Artist:</span> {{artist_name}}</h5>
 				<h5><span class = "attributes">Release Date:</span> {{release_date}}</h5>
@@ -27,17 +29,3 @@
     {{/each}}
   </div>
 </div>
-
-{{!-- <a href="/albums/{{_id}}">
-	{{#each albums}}
-		<div class="thumbnail right-caption col-sm-6 col-md-9">
-			<img src="{{image_url}}" />
-			<div class="caption">
-				<h4 class="album-name">{{album_name}}</h4>
-				<h5><span class = "attributes">Artist:</span> {{artist_name}}</h5>
-				<h5><span class = "attributes">Release Date:</span> {{release_date}}</h5>
-				<h5><span class = "attributes">Genre:</span> {{genre}}</h5>
-			</div>
-		</div>
-	{{/each}}
-</a> --}}
