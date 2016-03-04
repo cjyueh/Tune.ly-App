@@ -2,6 +2,11 @@
 	border-radius: 0 !important;
 }
 
+body {
+	color: #5D5D5D !important;
+}
+
+/*----------  FOR NAVBAR HEADER  ----------*/
 .navbar {
 	background: url("/images/sound_controller.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -17,6 +22,10 @@
 	padding: 2em 15px;
 }
 
+.navbar-brand:hover {
+	text-decoration: none;
+}
+
 .navbar-default {
 	border: none;
 }
@@ -25,13 +34,34 @@
 	color: #FFF9EA;
 }
 
-li {
-	list-style: none;
-}
-
+/*----------  FOR ALBUM INDEX THUMBNAILS  ----------*/
 img {
 	width: 200px;
 }
 .attributes {
 	font-weight: bold;
 }
+
+.thumbnail {
+	float: none;
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+	margin-right: -4px;
+	position: relative;
+	text-align: left;
+}
+/*
+.thumbnail.right-caption > img {
+    float: left;
+    margin-right: 1em;
+    position: absolute;
+}
+
+.thumbnail.right-caption {
+    float: left;
+    position: absolute;
+}
+
+.thumbnail.right-caption > .caption {
+    padding: 4px;
+}*/
