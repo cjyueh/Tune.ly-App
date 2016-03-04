@@ -6,8 +6,8 @@ function getAll(req, res) {
     if (err) {
       console.log(err);
     }
-    res.send(albums);
-    // res.render('layout', {albums: albums});
+    // res.send(albums); //show seed data on page
+    res.render('../views/albums/index', {albums: albums});
   });
 }
 
@@ -18,7 +18,7 @@ function getAll(req, res) {
 //     if (err) {
 //       console.log(err);
 //     }
-//     res.redirect('layout');
+//     res.redirect('index');
 //   });
 // }
 

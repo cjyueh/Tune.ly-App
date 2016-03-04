@@ -1,0 +1,13 @@
+<ul>
+	{{#each albums}}
+	<li><a class="album-name" href="/albums/{{_id}}">{{album_name}}</a>
+		<ul>
+			<li class="album-artist"><span class = "attributes">Artist:</span> {{artist_name}}</li>
+			<li class="release-date"><span class = "attributes">Release Date:</span> {{release_date}}</li>
+			<li class="genre"><span class = "attributes">Genre:</span> {{genre}}</li>
+			{{!-- <li class="img">{{image_url}}</li> --}}
+			<li><img src="{{image_url}}"></li>
+		</ul>
+	</li>
+	{{/each}}
+</ul>
