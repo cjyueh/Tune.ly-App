@@ -1,0 +1,21 @@
+<h1>Edit an Album</h1>
+<form method="POST" action="/albums/{{album._id}}?_method=PATCH">
+  <div class="form-group col-md-4">
+    <input name="album_name" class="form-control" placeholder="Album Name" value="{{album.album_name}}" />
+  </div>
+  <div class="form-group col-md-4">
+    <input name="artist_name"  class="form-control" placeholder="Artist Name" value="{{album.artist_name}}" />
+  </div>
+  <div class="form-group col-md-4">
+    <input name="release_date"  class="form-control" placeholder="Release Date" value="{{album.release_date}}" />
+  </div>
+  <div class="form-group col-md-4">
+    <input name="genre"  class="form-control" placeholder="Genre" value="{{album.genre}}" />
+  </div>
+  <div class="form-group col-md-4">
+    <input name="image_url"  class="form-control" placeholder="Image URL" value="{{album.image_url}}" />
+  </div>
+  <div class="form-group col-md-4">
+    <input class="btn btn-primary col-md-12" type="submit" value="Update Album">
+  </div>
+</form>

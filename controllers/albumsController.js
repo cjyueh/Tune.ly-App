@@ -27,7 +27,7 @@ function newAlbum(req, res) {
   res.render('../views/albums/new');
 }
 
-// GET form to edit an album
+// GET one album
 function showAlbum(req, res) {
   var id = req.params.id;
   Album.findById({_id: id}, function (err, album) {
@@ -39,9 +39,55 @@ function showAlbum(req, res) {
   });
 }
 
+// GET form to edit an album
+function editAlbum(req, res) {
+  var id = req.params.id;
+  Album.findById({_id: id}, function (err, album) {
+    if (err) {
+      console.log(err);
+    }
+    // res.send("this is the edit page"); 
+    res.render('../views/albums/edit', {album: album});
+  });
+}
+
+// POST updates to album
+function updateAlbum(req, res) {
+  var id = req.params.id;
+  Album.findById({_id: id}, function (err, album) {
+    if (err) {
+      console.log(err);
+    }
+    if (req.body.album_name) {
+      album.album_name = req.body.album_name;
+    }
+    if (req.body.artist_name) {
+      album.artist_name = req.body.artist_name;
+    }
+    if (req.body.release_date) {
+      album.release_date = req.body.release_date;
+    }
+    if (req.body.genre) {
+      album.genre = req.body.genre;
+    }
+    if (req.body.image_url) {
+      album.image_url = req.body.image_url;
+    }
+    album.save(function(err) {
+      if (err) {
+        console.log(err);
+      }
+      // res.send("It's updated!");
+      res.render('../views/albums/show', {album: album});
+    });
+  });
+}
+
 module.exports = {
   getAll: getAll,
   newAlbum: newAlbum,
   createAlbum: createAlbum,
-  showAlbum: showAlbum
+  showAlbum: showAlbum,
+  editAlbum: editAlbum,
+  updateAlbum: updateAlbum
 };
