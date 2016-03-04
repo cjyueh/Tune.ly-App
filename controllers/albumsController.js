@@ -27,8 +27,21 @@ function newAlbum(req, res) {
   res.render('../views/albums/new');
 }
 
+// GET form to edit an album
+function showAlbum(req, res) {
+  var id = req.params.id;
+  Album.findById({_id: id}, function (err, album) {
+    if (err) {
+      console.log(err);
+    }
+    // res.send(album); 
+    res.render('../views/albums/show', {album: album});
+  });
+}
+
 module.exports = {
   getAll: getAll,
   newAlbum: newAlbum,
-  createAlbum: createAlbum
+  createAlbum: createAlbum,
+  showAlbum: showAlbum
 };
