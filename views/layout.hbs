@@ -1,15 +1,19 @@
 <!doctype html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    {{!-- // <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> --}}
   </head>
   <body>
-    <header>
-      <h1><a href="/albums">Tune.ly</a></h1>
-      <a href="/albums/new">+ Album</a>
-    </header>
-    <hr>
-    <!-- the below `triple-stash`, avoid handlebars escaping any html -->
-   {{{body}}}
+
+    {{> header}}
+
+    <div class="container">
+      {{{body}}}
+    </div>
+
   </body>
 </html>

@@ -1,10 +1,58 @@
-li {
-	list-style: none;
+* {
+	border-radius: 0 !important;
+}
+
+body {
+	color: #5D5D5D !important;
+}
+
+/*----------  FOR NAVBAR HEADER  ----------*/
+.navbar {
+	background: url("/images/sound_controller.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.navbar-brand {
+	font-family: 'Gruppo', cursive;
+	font-size: 7em;
+	height: 3.5em;
+	padding: 2em 15px;
+}
+
+.navbar-brand:hover {
+	text-decoration: none;
+}
+
+.navbar-default {
+	border: none;
+}
+
+.navbar-default .navbar-brand {
+	color: #FFF9EA;
+}
+
+/*----------  FOR ALBUM INDEX THUMBNAILS  ----------*/
+.index {
+	margin-top: 5em;
 }
 
 img {
+	border: 1px solid #aaaaaa;
 	width: 200px;
 }
+
 .attributes {
 	font-weight: bold;
+}
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
+.alb-thumb {
+	display: inline-block;
 }
