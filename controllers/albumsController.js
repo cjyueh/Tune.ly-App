@@ -7,7 +7,7 @@ function getAll(req, res) {
       console.log(err);
     }
     // res.send(albums); //show seed data on page
-    res.render('../views/albums/index', {albums: albums});
+    res.render('../views/albums/index', {albums: albums.reverse()});
   });
 }
 
