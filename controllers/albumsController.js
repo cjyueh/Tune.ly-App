@@ -83,11 +83,24 @@ function updateAlbum(req, res) {
   });
 }
 
+// POST to delete an album
+function removeAlbum(req, res) {
+  var id = req.params.id;
+  Album.remove({_id: id}, function (err) {
+    if (err) {
+      console.log(err);
+    }
+    res.send("we deleted an album!"); 
+    // res.render('../views/albums/index');
+  });
+}
+
 module.exports = {
   getAll: getAll,
   newAlbum: newAlbum,
   createAlbum: createAlbum,
   showAlbum: showAlbum,
   editAlbum: editAlbum,
-  updateAlbum: updateAlbum
+  updateAlbum: updateAlbum,
+  removeAlbum: removeAlbum
 };
