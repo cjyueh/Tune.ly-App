@@ -21,7 +21,9 @@ body {
 	font-size: 10em;
 	height: 1em;
     padding: 1.2em 9.5px;
-    padding-left: .1em;
+    padding-left: .3em;
+    padding-bottom: .9em;
+    padding-top: .7em;
 }
 
 .navbar-brand:hover {
@@ -34,6 +36,7 @@ body {
 
 .navbar-default .navbar-brand {
 	color: #FFF9EA;
+    
 }
 
 /*----------  FOR ALBUM INDEX THUMBNAILS  ----------*/
