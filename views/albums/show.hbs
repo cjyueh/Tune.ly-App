@@ -8,6 +8,8 @@
 	<h5><span class = "attributes">Genre:</span> {{album.genre}}</h5>
 </div>
 
-<a href="/albums/{{album._id}}/edit">Edit Album</a>
 
-
+<a href="/albums/{{album._id}}/edit" class="btn btn-primary">Edit Album</a>
+<form method="POST" action="/albums?_method=DELETE">
+	<button type="submit" class="btn btn-primary">Delete Album</button>
+</form>
