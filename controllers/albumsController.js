@@ -90,8 +90,8 @@ function removeAlbum(req, res) {
     if (err) {
       console.log(err);
     }
-    res.send("we deleted an album!"); 
-    // res.render('../views/albums/index');
+    // res.send("we deleted an album!"); 
+    res.redirect('/albums');
   });
 }
 

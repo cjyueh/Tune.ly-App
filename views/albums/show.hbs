@@ -10,6 +10,6 @@
 
 
 <a href="/albums/{{album._id}}/edit" class="btn btn-primary">Edit Album</a>
-<form method="POST" action="/albums?_method=DELETE">
+<form method="POST" action="/albums/{{album._id}}?_method=DELETE">
 	<button type="submit" class="btn btn-primary">Delete Album</button>
 </form>

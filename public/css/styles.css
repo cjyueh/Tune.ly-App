@@ -4,7 +4,8 @@
 
 body {
 	font-family: 'Montserrat', sans-serif;
-    color: #5D5D5D !important;
+    color: #FFF9EA !important;
+	
 }
 
 /*----------  FOR NAVBAR HEADER  ----------*/
@@ -27,7 +28,10 @@ body {
 }
 
 .navbar-brand:hover {
-	text-decoration: none;
+	text-decoration: #FFF9EA;
+	text-shadow: 0 0 .07em #FFF9EA;
+	
+	
 }
 
 .navbar-default {
