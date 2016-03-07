@@ -11,9 +11,12 @@ function getAll(req, res) {
   });
 }
 
+// GET albums matching search input value
 function searchAlbum(req, res) {
-  console.log(req.body);
-  // Album.find({album_name: req.body})
+  // console.log(req.query);
+  Album.find({album_name: req.query}, function(err, albums) {
+
+  });
 }
 
 // POST (create) a new album
