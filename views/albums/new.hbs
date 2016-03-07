@@ -1,21 +1,21 @@
 <h1>Add New Albums</h1>
 <form method="POST" action="/albums">
   <div class="form-group col-md-4">
-    <input name="album_name" class="form-control" placeholder="Album Name" />
+    <input name="album_name" class="form-control" placeholder="Album Name" required='true'/>
   </div>
   <div class="form-group col-md-4">
-    <input name="artist_name"  class="form-control" placeholder="Artist Name" />
+    <input name="artist_name"  class="form-control" placeholder="Artist Name" required='true' />
   </div>
   <div class="form-group col-md-4">
-    <input name="release_date"  class="form-control" placeholder="Release Date" />
+    <input name="release_date"  class="form-control" placeholder="Release Date (MM/DD/YYYY)" required='true'/>
   </div>
   <div class="form-group col-md-4">
-    <input name="genre"  class="form-control" placeholder="Genre" />
+    <input name="genre"  class="form-control" placeholder="Genre" required='true'/>
   </div>
   <div class="form-group col-md-4">
-    <input name="image_url"  class="form-control" placeholder="Image URL" />
+    <input name="image_url"  class="form-control" placeholder="Image URL" required='true'/>
   </div>
   <div class="form-group col-md-4">
-    <input class="btn btn-primary col-md-12" type="submit" value="Add Album">
+    <input class="btn btn-primary col-md-12" type="submit" value="Add Album" required='true'>
   </div>
 </form>
