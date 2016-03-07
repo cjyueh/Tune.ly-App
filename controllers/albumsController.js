@@ -13,9 +13,13 @@ function getAll(req, res) {
 
 // GET albums matching search input value
 function searchAlbum(req, res) {
-  // console.log(req.query);
-  Album.find({album_name: req.query}, function(err, albums) {
-
+  console.log(req.query);
+  Album.find({album_name: { "$regex": req.query.searchQuery, "$options": "i" }}, function(err, albums) {
+    if (err) {
+      console.log(err);
+    }
+    console.log({albums: albums});
+    res.json({albums: albums});
   });
 }
 
