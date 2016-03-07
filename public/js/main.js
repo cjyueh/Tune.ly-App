@@ -1,26 +1,3 @@
-// $( document ).ready(function() {
-//   console.log( "ready!" );
-//   $.ajax({
-//     type: 'GET',
-//     url:'/albums',
-//     data: ''
-//     dataType: 'json',
-//     success: function liveSearch(album) {
-//       // console.log('here are a lot of ' + album);
-//       var searchInput = $('#search-input');
-//       var searchResults = $('#search-results');
-//       if (searchInput == {album: album_name}) {
-//         searchResults = {album: album_name};
-//       } else {
-//         searchResults = {albums: albums};
-//       }
-//     //   $('#search-input', function(album) {
-//     //     $('#search-results').html(album);
-//     //   });
-//     }
-//   });
-// });
-
 $( document ).ready(function() {
   $('#search-form').on('submit', function(event) {
     event.preventDefault();
@@ -29,10 +6,12 @@ $( document ).ready(function() {
     $.ajax({
       type: 'GET',
       url:'/albums/search',
-      data: {searchQuery: currentQuery}
-      // dataType: 'json'
+      data: {searchQuery: currentQuery}, // data sent to server
+      dataType: 'json', // datatype expected back from server
+      success: function(data, status, xhr) {
+        console.log(data);
+        
+      }
     });
-    // $('index').each(function(err, albums) {
-    // })
   });
 });
