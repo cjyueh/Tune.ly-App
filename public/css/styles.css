@@ -22,9 +22,9 @@ body {
 	font-size: 10em;
 	height: 1em;
     padding: 1.2em 9.5px;
-    padding-left: .3em;
-    padding-bottom: .9em;
-    padding-top: .6em;
+    padding-left: 0.3em;
+    padding-bottom: 0.9em;
+    padding-top: 0.6em;
 }
 
 .navbar-brand:hover {
