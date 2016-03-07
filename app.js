@@ -4,6 +4,7 @@ var app = express();
 var methodOverride = require('method-override');
 var hbs = require('hbs');
 
+
 // for database
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/albums-app');

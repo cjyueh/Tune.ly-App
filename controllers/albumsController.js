@@ -11,6 +11,18 @@ function getAll(req, res) {
   });
 }
 
+// GET albums matching search input value
+function searchAlbum(req, res) {
+  console.log(req.query);
+  Album.find({album_name: { "$regex": req.query.searchQuery, "$options": "i" }}, function(err, albums) {
+    if (err) {
+      console.log(err);
+    }
+    console.log({albums: albums});
+    res.json({albums: albums});
+  });
+}
+
 // POST (create) a new album
 function createAlbum(req, res) {
   var album = new Album(req.body);
@@ -98,6 +110,7 @@ function removeAlbum(req, res) {
 module.exports = {
   getAll: getAll,
   newAlbum: newAlbum,
+  searchAlbum: searchAlbum,
   createAlbum: createAlbum,
   showAlbum: showAlbum,
   editAlbum: editAlbum,

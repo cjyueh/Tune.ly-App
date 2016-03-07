@@ -1,10 +1,9 @@
 {{!-- SEARCH FIELD AND `ADD ALBUM` BUTTON --}}
 
-
 <div class="col-sm-6 col-md-9 col-centered sub-menu">
-	<form class="nav navbar-nav navbar-form navbar-left" role="search">
+	<form class="nav navbar-nav navbar-form navbar-left" role="search" id="search-form">
 		<div class="form-group">
-			<input type="text" class="form-control" placeholder="Search">
+			<input type="text" class="form-control" placeholder="Search for Album Name" id="search-input">
 		</div>
 		<button type="submit" class="btn btn-default">Search</button>
 	</form>
@@ -16,13 +15,13 @@
 
 {{!-- FOR EACH ALBUM, MAKE THUMBNAIL --}}
 <div class="row index">
-	<div class="col-sm-6 col-md-9 col-centered">
-		{{#each albums}}
-		<a href="/albums/{{_id}}" class="thumbnail">
-			<div class="alb-thumb">
-				<img src="{{image_url}}" />
-			</div>
-			<div class="caption alb-thumb">
+  <div class="col-sm-6 col-md-9 col-centered" id="index">
+  	{{#each albums}}
+    <a href="/albums/{{_id}}" class="thumbnail">
+    	<div class="alb-thumb">
+      	<img src="{{image_url}}" />
+      </div>
+      <div class="caption alb-thumb">
 				<h4 class="album-name">{{album_name}}</h4>
 				<h5><span class = "attributes">Artist:</span> {{artist_name}}</h5>
 				<h5><span class = "attributes">Release Date:</span> {{release_date}}</h5>

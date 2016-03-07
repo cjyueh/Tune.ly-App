@@ -10,6 +10,8 @@ router.route('/albums')
   .post(albumsController.createAlbum); //route to post new album
 router.route('/albums/new')
   .get(albumsController.newAlbum); //route to form for new album
+router.route('/albums/search')
+  .get(albumsController.searchAlbum); //route to search for albums
 router.route('/albums/:id')
   .get(albumsController.showAlbum) //route to show one album
   .patch(albumsController.updateAlbum) //route to post updated album
