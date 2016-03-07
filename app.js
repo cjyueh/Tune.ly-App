@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var methodOverride = require('method-override');
 var hbs = require('hbs');
+// var script = require('./public/js/main.js');
 
 // for database
 var mongoose = require('mongoose');

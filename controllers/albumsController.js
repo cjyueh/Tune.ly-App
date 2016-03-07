@@ -11,6 +11,11 @@ function getAll(req, res) {
   });
 }
 
+function searchAlbum(req, res) {
+  console.log(req.body);
+  // Album.find({album_name: req.body})
+}
+
 // POST (create) a new album
 function createAlbum(req, res) {
   var album = new Album(req.body);
@@ -98,6 +103,7 @@ function removeAlbum(req, res) {
 module.exports = {
   getAll: getAll,
   newAlbum: newAlbum,
+  searchAlbum: searchAlbum,
   createAlbum: createAlbum,
   showAlbum: showAlbum,
   editAlbum: editAlbum,
