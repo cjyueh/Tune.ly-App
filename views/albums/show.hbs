@@ -1,15 +1,24 @@
-<h2>{{album.album_name}}</h2>
-<div class="alb-thumb">
-	<img src="{{album.image_url}}" />
-</div>
-<div class="caption alb-thumb">
-	<h5><span class = "attributes">Artist:</span> {{album.artist_name}}</h5>
-	<h5><span class = "attributes">Release Date:</span> {{album.release_date}}</h5>
-	<h5><span class = "attributes">Genre:</span> {{album.genre}}</h5>
-</div>
+<div class="col-sm-10 col-md-12 col-centered">
+	<strong><h2>{{album.album_name}}</h2></strong>
+	<img class="show-image" src="{{album.image_url}}" />
+		
+		<div class="caption alb-thumb">
+		<h5><span class = "attributes">Artist:</span> {{album.artist_name}}</h5>
+		<h5><span class = "attributes">Release Date:</span> {{album.release_date}}</h5>
+		<h5><span class = "attributes">Genre:</span> {{album.genre}}</h5>
 
-
-<a href="/albums/{{album._id}}/edit" class="btn btn-primary">Edit Album</a>
-<form method="POST" action="/albums/{{album._id}}?_method=DELETE">
-	<button type="submit" class="btn btn-primary">Delete Album</button>
-</form>
+		
+		<div class="col-md-8">
+		
+		<span class="attributes">
+		<a href="/albums/{{album._id}}/edit" class="btn btn-primary show">Edit Album</a>
+		</span>
+			<br>
+		<span class="attributes">
+			<form method="POST" action="/albums/{{album._id}}?_method=DELETE">
+			<button type="submit" class="btn btn-primary show">Delete Album</button>
+			</form>
+		</span>
+			</div>
+		</div>
+	</div>

@@ -3,9 +3,8 @@
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
-    color: #FFF9EA !important;
-	
+	font-family: 'Gruppo', cursive;
+    color: #000000 !important;
 }
 
 /*----------  FOR NAVBAR HEADER  ----------*/
@@ -15,6 +14,7 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	color: #FFF9EA;
 }
 
 .navbar-brand {
@@ -22,15 +22,17 @@ body {
 	font-size: 10em;
 	height: 1em;
     padding: 1.2em 9.5px;
-    padding-left: .3em;
-    padding-bottom: .9em;
-    padding-top: .7em;
+    padding-left: 0.3em;
+    padding-bottom: 0.9em;
+    padding-top: 0.6em;
 }
 
 .navbar-brand:hover {
-	text-decoration: #FFF9EA;
+	text-decoration: none;
 	text-shadow: 0 0 .07em #FFF9EA;
-	
+	backface-visibility: visible; 
+	color: #FFF9EA;
+	backface-visibility: hidden;
 	
 }
 
@@ -45,7 +47,8 @@ body {
 
 /*----------  FOR ALBUM INDEX THUMBNAILS  ----------*/
 .index {
-	margin-top: 5em;
+	margin-top: 10%;
+	margin-bottom:3%;
 }
 
 img {
@@ -56,7 +59,8 @@ img {
 
 .attributes {
 	font-weight: bold;
-    padding-left: 1em;
+    padding-left: 1.23em;
+	font-size: 1em;
 }
 
 .col-centered {
@@ -66,4 +70,34 @@ img {
 
 .alb-thumb {
 	display: inline-block;
+	
+
 }
+
+.show-image {
+	border: 3px solid #aaaaaa;
+	width: 400px;
+    margin: 1em;
+}
+h2{
+	font-family: 'Gruppo', cursive;
+	font-size: 3.14em;
+	padding-left: .3em;
+}
+h4{
+	font-weight: bold;
+	
+}
+h5{
+	font-size: 1.23em;
+	
+}
+sub-menu{
+	margin-bottom:.4em;
+
+}
+show-thumb{
+	padding-top: .5em;
+	
+}
+
