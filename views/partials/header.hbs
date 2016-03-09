@@ -3,6 +3,15 @@
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/albums">tune.ly</a>
 		</div>
-	</div>
-	
+		<div class="nav navbar-nav navbar-right" id="user">
+      {{#if user }}
+        <div>
+          <h3>Hello, {{user.fb.firstName}}</h3>
+        </div>
+        <a href="/logout">Logout</a>
+      {{else}}
+        <a class="" href="/auth/facebook">Login with Facebook</a>
+      {{/if}}
+	  </div>
+  </div>
 </nav>

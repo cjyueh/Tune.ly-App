@@ -7,7 +7,7 @@ function getAll(req, res) {
       console.log(err);
     }
     // res.send(albums); //show seed data on page
-    res.render('../views/albums/index', {albums: albums.reverse()});
+    res.render('../views/albums/index', {albums: albums.reverse(), user: req.user});
   });
 }
 
@@ -19,7 +19,7 @@ function searchAlbum(req, res) {
       console.log(err);
     }
     console.log({albums: albums});
-    res.json({albums: albums});
+    res.json({albums: albums, user: req.user});
   });
 }
 
@@ -36,7 +36,7 @@ function createAlbum(req, res) {
 
 // GET form to make new album
 function newAlbum(req, res) {
-  res.render('../views/albums/new');
+  res.render('../views/albums/new', {user: req.user});
 }
 
 // GET one album
@@ -47,7 +47,7 @@ function showAlbum(req, res) {
       console.log(err);
     }
     // res.send(album); 
-    res.render('../views/albums/show', {album: album});
+    res.render('../views/albums/show', {album: album, user: req.user});
   });
 }
 
@@ -59,7 +59,7 @@ function editAlbum(req, res) {
       console.log(err);
     }
     // res.send("this is the edit page"); 
-    res.render('../views/albums/edit', {album: album});
+    res.render('../views/albums/edit', {album: album, user: req.user});
   });
 }
 
@@ -90,7 +90,7 @@ function updateAlbum(req, res) {
         console.log(err);
       }
       // res.send("It's updated!");
-      res.render('../views/albums/show', {album: album});
+      res.render('../views/albums/show', {album: album, user: req.user});
     });
   });
 }
